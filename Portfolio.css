@@ -1,0 +1,598 @@
+body{
+    margin: 0;
+    background-color:white;
+    scroll-behavior: smooth;   
+}
+
+img{
+    display: block;
+    max-width: 100%;
+}
+
+header{
+    background-image: linear-gradient(to bottom right, #161b21,rgb(58, 65, 71) );
+    height:111px;
+    position: fixed;
+    width: 100vw;
+    z-index: 1000;
+}
+
+header ul{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    list-style: none;
+}
+
+header ul a{
+    display: block;
+    padding: 20px;
+    color: rgb(244, 169, 80);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration: none;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+
+header ul a:hover{
+    transition: .6s;
+    background-color: #eeae608c;
+}
+
+header .logo{
+    float: left;
+    display: block;
+    margin: 20px 15px 15px 20px;
+    background-color: rgb(244, 169, 80);
+    border-radius: 10px;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+header .menu{
+    clear: both;
+    max-height: 0;
+    transition: max-height .3s ease-out;
+    margin-top: 100px;
+    text-align: center;
+    background-color: transparent;
+}
+
+header .menu-icon{
+    padding: 24px 16px;
+    top: 25px;
+    right: 30px;
+    color:rgb(244, 169, 80);
+    background-color: rgb(244, 169, 80);
+    border-radius: 10px;
+    position: relative;
+    float: right;
+    cursor: pointer;
+}
+
+header .nav-icon{
+    background: black;
+    display: block;
+    height: 2px;
+    width: 20px;
+    position: relative;
+    transition: background .2s ease-out;
+}
+
+header .nav-icon:before{
+    background: black;
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100%;
+    transition: all .3s ease-out;
+    position: absolute;
+    top:7px;
+}
+
+header .nav-icon:after{
+    background: black;
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100%;
+    transition: all .3s ease-out;
+    position: absolute;
+    top:-7px;
+}
+
+header .menu-btn{
+    display:none;
+}
+
+header .menu-btn:checked ~ .menu{
+    max-height: 300px;
+    background-image: linear-gradient(to bottom right, #161b21,#3a4147 );
+}
+
+header .menu-btn:checked ~ .menu-icon .nav-icon{
+    background: transparent;
+}
+
+header .menu-btn:checked ~ .menu-icon .nav-icon:before{
+    transform: rotate(-45deg);
+    top:0
+}
+
+header .menu-btn:checked ~ .menu-icon .nav-icon:after{
+    transform: rotate(45deg);
+    top:0;
+}
+
+header .menu-btn:checked ~ ul{
+    justify-content: center;
+}
+
+main{
+    position: relative;
+}
+
+main .start .overlay{
+    background-color: rgba(0, 0, 0, 0.493);
+    height: 1000px;
+    width: 100%;
+}
+
+main .start{
+    background-image: url(resources/office.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    height:1000px;
+    max-width: 100%;
+}
+
+main .start .h1{
+    display: flex;
+    position: relative;
+    top: 10%;
+    justify-content: space-around;
+}
+
+main .start .h1 h1{ 
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 80px;
+    width:400px;
+    top: 10%;
+    text-align: center;
+    position: relative;
+    color: white;
+    overflow: hidden;
+    border-right: 2px solid rgba(255,255,255,.75);
+    white-space: nowrap;  
+    animation: typewritermax 1.5s steps(13) 1s 1 normal both,
+    blinkTextCursor 700ms steps(13) infinite normal;
+}
+
+main .start .h1 img{
+    clip-path: ellipse(35% 50% at 50% 50%);
+    position: static;
+}
+
+main .start span::before { 
+    content: "Programista."; 
+    animation: text_change infinite 7s; 
+    padding-left: 10px; 
+} 
+
+main .start span{
+    position: relative;
+    left: 10%;
+    bottom: 18%;
+    background-color:rgb(244, 169, 80);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 80px;
+    color: #3a4147;
+    padding-right: 10px;
+}
+
+main .start h2{
+    color:white;
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 10%;
+    top:15%;
+}
+
+main .start .links{
+    display: flex;
+    position: relative;
+    top: 20%;
+    left: 10%;
+    flex-direction: row;
+    justify-content:  space-around;
+    width: 40%;
+}
+
+main .start .links img:hover{
+    cursor: pointer;
+    transform: rotate(360deg);
+    transition: .3s ease;
+}
+
+main .top_btn img{
+    position: sticky;
+    top:80%;
+    left: 95%;
+    z-index: 99;
+    padding: 5px;
+    clip-path: circle(50.0% at 50% 50%);
+}
+
+main .omnie{
+    margin: 20px;
+    margin-top:5%;
+    padding: 10px 30px 40px 30px;
+    height: 500px;
+    color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border: 3px solid rgb(244, 169, 80);
+    border-radius: 20px;
+}
+
+main .omnie h1{
+    color:rgb(244, 169, 80);
+    font-size: 40px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-left: 10%;
+}
+
+main .omnie img{
+    display: block;
+    clip-path: circle(37.5% at 50% 50%);
+    shape-outside: circle();
+    float: left;
+}
+
+main .omnie p{
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+
+main .produkty{
+    width: 100vw;
+    max-width: 100%;
+    margin-top:6%;
+}
+
+main .produkty h1{
+    color:rgb(244, 169, 80);
+    font-size: 40px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-left: 10%;
+}
+
+main .produkty .prs{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+main .produkty img{
+    clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
+}
+
+main .produkty .card {
+    background-color: transparent;
+    width: 500px;
+    height: 400px;
+    margin:30px;
+    border: 3px solid rgb(244, 169, 80);
+}
+    
+main .produkty .inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+    
+main .produkty .card:hover .inner {
+    transform: rotateY(180deg);
+}
+
+main .produkty  .front, .back{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  background-image: linear-gradient(to bottom right, #161b21,#3a4147 );
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+
+main .produkty .front{
+    text-align: center;
+}
+
+main .produkty .back{
+    transform: rotateY(180deg);
+}
+
+main .produkty .back p{
+    padding: 20px;
+}
+
+main .produkty .back a{
+    text-decoration: none;
+    text-align: center;
+    position: relative;
+    left:40%;
+    top:20%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgb(244, 169, 80);
+    color:#3a4147;
+    padding: 20px 15px;
+    border-radius: 10px;
+}
+
+main .produkty .back a:hover{
+    background-color: rgb(192, 119, 31);
+    transition: .6s;
+}
+
+main .hobby{
+    margin: 20px;
+    margin-top:6%;
+}
+
+main .hobby h1{
+    color:rgb(244, 169, 80);
+    font-size: 40px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-left: 10%;
+}
+
+main .hobby .gallery{
+    border: 3px solid rgb(244, 169, 80);
+    border-radius: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+main .hobby .gallery img{
+    max-width: 100%;
+    width: 40%;
+    height: auto;
+    margin: 20px;
+}
+
+main .hobby .gallery .img1{
+	transition: .3s ease-in-out;
+}
+
+main .hobby .gallery .img1:hover{
+    transform: rotate(10deg);
+    transition: .3s ease-in-out;
+}
+
+main .hobby .gallery .img2{
+	transition: .3s ease-in-out;
+}
+
+main .hobby .gallery .img2:hover{
+    transform: skewX(-20deg);
+    transition: .3s ease-in-out;
+}
+
+main .hobby .gallery .img3{
+	transition: .3s ease-in-out;
+}
+
+main .hobby .gallery .img3:hover{
+    transform: rotateY(180deg);
+    transition: .3s ease-in-out;
+}
+
+main .hobby .gallery .img4{
+	transition: .3s ease-in-out;
+}
+
+main .hobby .gallery .img4:hover{
+    transform: scale(1.1);
+    transition: .3s ease-in-out;
+}
+
+main .kontakt{
+    height: 500px;
+}
+
+main .kontakt h1{
+    color:rgb(244, 169, 80);
+    font-size: 40px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-left: 10%;
+}
+
+main .kontakt form{
+    display: grid;
+    grid-template-areas: 
+    "name button"
+    "email button"
+    "msg msg";
+    margin: 20px;
+    border: 3px solid rgb(244, 169, 80);
+    border-radius: 20px;
+}
+
+main .kontakt input{
+    margin-top: 10px;
+    position: relative;
+    float: left;
+    left: 50%;
+    width: 40%;
+    border: 2px solid rgb(244, 169, 80);
+    background-color: rgba(244, 170, 80, 0.658);
+    border-radius: 5px;
+}
+
+main .kontakt input#name{
+    grid-area: name;
+}
+main .kontakt input#mail{
+    grid-area: email;
+}
+
+main .kontakt textarea#msg{
+    grid-area: msg;
+    width: 60%;
+    height: 300px;
+    position: relative;
+    left: 25%;
+    margin-top: 10px;
+    border: 2px solid rgb(244, 169, 80);
+    background-color: rgba(244, 170, 80, 0.658);
+}
+
+main .kontakt button{
+    grid-area: button;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    background-color:rgb(244, 169, 80);
+    border: #161b21;
+    color:#3a4147;
+    width: 100px;
+    padding: 20px;
+    border-radius: 5px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-transform: uppercase;
+    
+}
+
+footer{
+    margin-top: 80px;
+    background-image: linear-gradient(to bottom right, #161b21,#3a4147 );
+    height: 70px;
+    color:rgb(244, 169, 80);
+    text-align: center;
+}
+
+footer p{
+    padding-top: 30px;
+}
+
+
+@media (min-width:800px){
+
+    header ul a{
+        float: left;
+        padding: 20px 30px;
+    }
+
+    header .menu{
+        display: flex;
+        justify-content: flex-end;
+        clear: none;
+        margin: 20px;
+        max-height: none;
+        background-color: transparent;
+    }
+
+    header .menu-icon{
+        display: none;
+    }
+}
+
+@media(max-width:1200px)
+{
+    main .start .h1 img{
+        display: none;
+    }
+
+    main .start .h1 h1{
+        font-size: 60px;
+    }
+
+    main .start span{
+        top:10%;
+        left:20%;
+        font-size: 60px;
+    }
+
+    main .omnie p{
+        font-size: 15px;
+        letter-spacing: default;
+    }
+
+    main .omnie{
+        height: auto;
+    }
+
+    main .kontakt form{
+        grid-template-areas: 
+        "name"
+        "email"
+        "msg"
+        "button";
+    }
+
+    main .kontakt input{
+        left:30%;
+    }
+
+    main .kontakt button{
+        position: relative;
+        left: 30%;
+    }
+    main .hobby .gallery img{ 
+        width: auto;
+
+    }
+    main .start .h1 h1{
+    animation: typewriter1200 1.5s steps(13) 1s 1 normal both,
+    blinkTextCursor 700ms steps(13) infinite normal;
+    }
+}
+
+@keyframes text_change{
+    0% { 
+        content: "Programista."; 
+    } 
+    20% { 
+        content: "Designer."; 
+    } 
+    40% { 
+        content: "Artysta."; 
+    }
+    60% { 
+        content: "Pasjonat."; 
+    } 
+    80% { 
+        content: "Specjalista."; 
+    } 
+}
+
+@keyframes typewritermax{
+    from{
+        width: 0;
+        height: 110px;}
+    to{
+        width: 600px;
+        height: 110px;}
+}
+
+@keyframes typewriter1200{
+    from{
+        width: 0;
+        height: 80px;}
+    to{
+        width: 450px;
+        height: 80px;}
+}
+
+@keyframes blinkTextCursor{
+    from{
+        border-right-color: rgba(255,255,255,.75);}
+    to{
+        border-right-color: transparent;}
+}
+}

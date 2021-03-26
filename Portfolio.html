@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="Portfolio.css" rel="stylesheet">
+    <title>Portfolio Adam Niemiec</title>
+</head>
+<body>
+    <header>
+        <label class="logo"><img src="resources/logo.png"></label>
+        <input class="menu-btn" type="checkbox" id="menu-btn" />
+        <label class="menu-icon" for="menu-btn"><span class="nav-icon"></span></label>
+        <ul class="menu">
+            <li><a href="#start">Start</a></li>
+	        <li><a href="#omnie">O mnie</a></li>
+	        <li><a href="#produkty">Produkty</a></li>
+	        <li><a href="#hobby">Hobby</a></li>
+	        <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+    </header>
+    <br><br><br>
+    <main>
+        <div class="start" id ="start">
+            <div class="overlay">
+                <br><br><br><br>
+                <div class="h1">
+                    <h1>Witaj, jestem </h1>
+                    <img src="resources/developer.jpg">
+                </div>
+                <span></span>
+                <h2>Znajdź mnie również na:</h2>
+                <div class="links">
+                    <img src="resources/facebook.png">
+                    <img src="resources/twitter.png">
+                    <img src="resources/linkedin.png">
+                    <img src="resources/soundcloud.png">
+                </div>
+            </div>
+        </div>
+        <div id="omnie"></div>
+        <a class="top_btn" href="#start"><img src="resources/up-arrow.png"></a>
+        <div class="omnie">
+            <h1>O mnie</h1>
+            <img src="resources/about1.jpg">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus bibendum massa vel augue blandit, ac porta leo iaculis. Vestibulum vehicula at nunc non dapibus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Phasellus ipsum urna, congue eget neque sed, mollis suscipit erat. Vivamus feugiat interdum laoreet. Aliquam suscipit nulla id vestibulum auctor. Cras eget mi lorem. Etiam eu auctor urna, iaculis semper ipsum. Maecenas sit amet sollicitudin augue, eget rutrum arcu. Nunc placerat consequat dolor, viverra porttitor sapien condimentum a. Phasellus malesuada magna eget arcu fermentum posuere.Nunc ut lorem lacus. Duis vestibulum vehicula velit eget ullamcorper. Curabitur ornare est posuere sem scelerisque, a lacinia magna tempor. Proin leo lacus, dictum ut accumsan in, tincidunt a ex. Fusce sed blandit ipsum. Integer rutrum, nulla rhoncus commodo condimentum, est libero iaculis mi, a elementum augue ligula ac est. Vivamus massa augue, elementum luctus lectus nec, tempor consequat urna.</p>
+        </div> <br>
+        <div id="produkty"></div>
+        <div class="produkty">
+            <h1>Produkty</h1>
+            <div class="prs">
+                <div class="card">
+                    <div class="inner">
+                        <div class="front">
+                            <img src="resources/project1.jpg">
+                            <h3>Produkt pierwszy</h3>
+                        </div>
+                        <div class="back">
+                            <br><br><br>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+                            <a class="a1" href="#">Zamów</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="inner">
+                        <div class="front">
+                            <img src="resources/project2.jpg">
+                            <h3>Produkt drugi</h3>
+                        </div>
+                        <div class="back">
+                            <br><br><br>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+                            <a class="a1" href="#">Zamów</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="inner">
+                        <div class="front">
+                            <img src="resources/project3.jpg">
+                            <h3>Produkt trzeci</h3>
+                        </div>
+                        <div class="back">
+                            <br><br><br>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+                            <a class="a1" href="#">Zamów</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="hobby"></div>
+        <div class="hobby">
+            <h1>Hobby</h1>
+            <div class="gallery">
+                <img class="img1" src="resources/hobby1.jpg">
+                <img class="img2" src="resources/hobby2.jpg">
+                <img class="img3" src="resources/hobby3.jpg">
+                <img class="img4" src="resources/hobby4.jpg">
+            </div>
+        </div>
+        <div class="kontakt" id="kontakt">
+            <h1>Kontakt</h1>
+            <form>
+                <label for="name"></label>
+                <input type="text" id="name" name="user_name" placeholder="Imię"><br>
+                <label for="mail"></label>
+                <input type="email" id="mail" name="user_email" placeholder="Email">
+                <button type="submit">Wyślij</button>
+                <label for="msg"></label>
+                <textarea id="msg" name="user_message" placeholder="Twoja wiadomość..."></textarea>
+            </form>
+        </div>
+    </main>
+    
+    <footer>
+        <p>Lorem ipsum 2020</p>
+    </footer>
+</body>
+</html>
